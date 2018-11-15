@@ -14,5 +14,13 @@ def cat_details(id):
 	cat = get_cat(id)
 	return render_template("cat.html",cat=cat)
 
+
+@app.route('/create_cats')
+def catbook_create():
+    cat_name = request.form('name')
+    if:
+    	pass
+    return render_template("home.html", cats=cats)
+
 if __name__ == '__main__':
    app.run(debug = True)
