@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask import render_template
 from database import *
 
@@ -17,10 +17,10 @@ def cat_details(id):
 
 @app.route('/create_cats')
 def catbook_create():
-    cat_name = request.form('name')
-    if:
-    	pass
-    return render_template("home.html", cats=cats)
-
+    if request.method=='GET':
+		return render_template('create_cats.html')
+    else :
+    	cat_name =request.form('name')
+    	create_cats(cat_name)
 if __name__ == '__main__':
    app.run(debug = True)
