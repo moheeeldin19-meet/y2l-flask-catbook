@@ -13,7 +13,6 @@
       }
     </style>
     <!--BOOTSTRAP CSS import-->
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   </head>
 <body>
@@ -35,17 +34,20 @@
                 <img class="card-img-top" src="{{url_for('static', filename='images/cat1.jpg')}}">
                 <div class="card-body">
                   <h5 class="card-title">{{cat.name}}</h5>
-                  <p class="card-text">Votes: 0</p>
+                  <p class="card-text">Votes:{{cat.vote}}</p>
                   <a href="cats/{{cat.id}}" class="btn btn-primary">View details</a>
                 </div>
               </div>
         </div>
       </div>
       {% endfor%}
-  <a href="/create_cats">create a cat</a>
+    </div>
+  
   <!--BOOTSTRAP Javascript import-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <a href="cats/createcat">add a cat</a>
+
 </body>
 </html>
